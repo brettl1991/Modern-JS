@@ -23,13 +23,17 @@ let score = 0;
 score += 1;
 let bonusMult = 450;
 score *= bonusMult;
-console.log(score); ////450
+console.log(score); //
 //unary operator: has 1 side
 let counter = 0;
 counter++;
 console.log(counter); //1
 // Variables: const: can not change value
 const year = 1991;
-year += 7; //error
+// year += 7; //error
 
 //Variables: old one is var
+//Boolean: true or false, yes or no, 0 or 1
+let isHungry = false;
+isHungry = 1239;
+console.log(isHungry);
