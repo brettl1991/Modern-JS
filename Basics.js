@@ -37,3 +37,15 @@ const year = 1991;
 let isHungry = false;
 isHungry = 1239;
 console.log(isHungry);
+
+//STRINGS
+let msg = "you are awesome";
+let newMsg = msg.toUpperCase();
+console.log(newMsg);
+
+let tvShow = "catdog";
+let cat = tvShow.indexOf("cat"); //0
+console.log(cat);
+let dog = tvShow.indexOf("dog"); //3
+console.log(dog);
+let z = tvShow.indexOf(z); //-1 so not found
