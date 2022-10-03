@@ -49,3 +49,11 @@ console.log(cat);
 let dog = tvShow.indexOf("dog"); //3
 console.log(dog);
 let z = tvShow.indexOf(z); //-1 so not found
+parseInt("24"); //24
+parseInt("23.54"); //23
+parseInt("bdhfhnk78"); //28
+
+parseFloat("34.98"); //34.98
+parseFloat("6"); //6
+parseFloat("I ate 3 shramp"); //NaN
+parseInt("$99"); //NaN
