@@ -57,3 +57,6 @@ parseFloat("34.98"); //34.98
 parseFloat("6"); //6
 parseFloat("I ate 3 shramp"); //NaN
 parseInt("$99"); //NaN
+
+//Comparison operators
+//== vs ===
