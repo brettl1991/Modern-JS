@@ -126,3 +126,27 @@ if (!(flavor === "garpe" || flavor === "cherry")) {
 let x = 7;
 
 // x == 7 || (x === 3 && x> 10
+
+//Switch statement
+let day = 7;
+// if (day === 1) {
+//   console.log("Monday");
+// } else if (day === 2) {
+//   console.log("Tuesday");
+// } etc...
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  case 4:
+    console.log("Thursday");
+    break;
+  default:
+    console.log("Invalid day");
+}
