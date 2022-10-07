@@ -69,3 +69,22 @@ if (loggedInUser) {
 } else {
   console.log("Please log in");
 }
+
+//Logical operators
+//AND
+
+let passwordNew = "chickenGal";
+
+if (passwordNew.length >= 8 && passwordNew.indexOf(" ") === -1) {
+  console.log("Valid password");
+} else {
+  console.log("Invalid password");
+}
+
+//pick number 1-10
+let num = 3;
+if (num >= 1 && num <= 10) {
+  console.log("Valid guess");
+} else {
+  console.log("Invalid guess");
+}
