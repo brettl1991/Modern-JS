@@ -88,3 +88,17 @@ if (num >= 1 && num <= 10) {
 } else {
   console.log("Invalid guess");
 }
+
+//OR
+let age = 64;
+if (age < 6 || age >= 65) {
+  console.log("You get it for free");
+} else {
+  console.log("You must pay");
+}
+
+//check if the color the shade of purple
+let color = "violet";
+if (color === "purole" || color === "lilac" || color === "violet") {
+  console.log("Great choice");
+}
