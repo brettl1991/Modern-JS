@@ -150,3 +150,19 @@ switch (day) {
   default:
     console.log("Invalid day");
 }
+
+let emoji = "sad face";
+
+switch (emoji) {
+  case "sad face":
+  case "happy face":
+    console.log("yellow");
+    break;
+  case "eggplant":
+    console.log("purple");
+    break;
+  case "heart":
+  case "lips":
+    console.log("red");
+    break;
+}
