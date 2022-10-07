@@ -40,3 +40,16 @@ if (userScore >= highScore) {
     `Good game, you score of ${userScore} did not beat the high score of ${highScore}`
   );
 }
+
+//Nested condition
+let password = "kitty";
+
+if (password.length >= 6) {
+  if (password.indexOf(" ") === -1) {
+    console.log("Valid password");
+  } else {
+    console.log("Password is long enough but can not contain spaces");
+  }
+} else {
+  console.log("Password must be longer!");
+}
