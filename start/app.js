@@ -22,4 +22,6 @@ if (rating === 3) {
   console.log("You are a superstar!");
 } else if (rating === 2) {
   console.log("Meets expectations :");
+} else if (rating === 1) {
+  console.log("Need improvement!");
 }
