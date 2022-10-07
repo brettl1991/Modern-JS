@@ -121,3 +121,8 @@ if (flavor !== "grape" && flavor !== "cherry") {
 if (!(flavor === "garpe" || flavor === "cherry")) {
   console.log("We only have grape and cherry");
 }
+
+//Operator presedence
+let x = 7;
+
+// x == 7 || (x === 3 && x> 10
