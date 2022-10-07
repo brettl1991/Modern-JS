@@ -53,3 +53,19 @@ if (password.length >= 6) {
 } else {
   console.log("Password must be longer!");
 }
+
+//Truthy and falsy
+let mistery = 5;
+if (mistery) {
+  console.log("Truthy");
+} else {
+  console.log("Falsy");
+}
+
+let loggedInUser = null;
+
+if (loggedInUser) {
+  console.log("You are logged in");
+} else {
+  console.log("Please log in");
+}
