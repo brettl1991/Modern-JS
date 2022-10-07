@@ -166,3 +166,13 @@ switch (emoji) {
     console.log("red");
     break;
 }
+
+//Ternary operator: condition ? true : false
+let number = 7;
+number === 7 ? console.log("lucky number") : console.log("unlucky number");
+
+//assign value to variable
+let status = "offline";
+
+let colorNew = status === "offline" ? "red" : "green";
+console.log(colorNew);
