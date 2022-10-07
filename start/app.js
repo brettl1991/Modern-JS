@@ -16,7 +16,7 @@
 //1  -  need improvement
 //anything else  --  wtf?
 
-let rating = 2;
+let rating = 213;
 
 if (rating === 3) {
   console.log("You are a superstar!");
@@ -24,4 +24,19 @@ if (rating === 3) {
   console.log("Meets expectations :)");
 } else if (rating === 1) {
   console.log("Need improvement!");
+} else {
+  console.log("Invalid rating");
+}
+
+//Example2
+let highScore = 1430;
+let userScore = 1600;
+
+if (userScore >= highScore) {
+  console.log(`Congrats, you have the new high score of ${userScore}`);
+  highScore = userScore;
+} else {
+  console.log(
+    `Good game, you score of ${userScore} did not beat the high score of ${highScore}`
+  );
 }
