@@ -31,3 +31,14 @@ topSongs.push("Fortunate Son");
 console.log(topSongs); //['First Time Ever I Saw Your Face', 'God Only Knows', 'A Day In The Life', 'Life On Mars', 'Fortunate Son']
 topSongs.pop(); //remove last item
 console.log(topSongs); //['First Time Ever I Saw Your Face', 'God Only Knows', 'A Day In The Life', 'Life On Mars']
+
+// Shift, Unshift
+let dishesToDo = ["big platter"];
+//add to the start
+dishesToDo.unshift("large plate", "small plate");
+
+dishesToDo.unshift("dirty plates");
+console.log(dishesToDo);
+//remove from the start
+dishesToDo.shift();
+console.log(dishesToDo);
