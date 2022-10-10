@@ -71,3 +71,30 @@ console.log(letters.reverse()); //['R', 'E', 'S', 'P', 'E', 'C', 'T']
 //Join return back a single string by joining the values, turn values (numbers) into strings
 console.log(letters.join("&")); //R&E&S&P&E&C&T
 console.log(letters.join(".")); //R.E.S.P.E.C.T
+
+//Slice makes a new array, does not modify original, copy a portion of an array
+//first index include and from where to start, last index until where but not include
+let animals = ["shark", "shalmon", "whale", "bear", "lizard", "tortoise"];
+
+//return all the swimmers
+let swimmers = animals.slice(0, 3);
+console.log(swimmers); //['shark', 'shalmon', 'whale']
+
+//return mammals
+let mammals = animals.slice(2, 4);
+console.log(mammals); //['whale', 'bear']
+
+//return reptiles
+let reptiles = animals.slice(4, 6);
+console.log(reptiles); //['lizard', 'tortoise']
+//or
+let reptilesTwo = animals.slice(4);
+console.log(reptilesTwo); //['lizard', 'tortoise']
+
+//or
+let reptilesThree = animals.slice(-2);
+console.log(reptilesThree); //['lizard', 'tortoise']
+
+//make copy
+animalsCopy = animals.slice();
+console.log(animalsCopy); //['shark', 'shalmon', 'whale', 'bear', 'lizard', 'tortoise']
