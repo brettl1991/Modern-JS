@@ -42,3 +42,8 @@ console.log(dishesToDo);
 //remove from the start
 dishesToDo.shift();
 console.log(dishesToDo);
+
+//Concat: merge more than 1 array, create a new copy/version, not mutating original
+let fruits = ["apple", "banana"];
+let veggies = ["aspargus", "brussel sprouts"];
+console.log(fruits.concat(veggies)); //['apple', 'banana', 'aspargus', 'brussel sprouts']
