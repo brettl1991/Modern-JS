@@ -129,3 +129,20 @@ console.log(people.sort()); //['Agnes', 'Billie', 'Jacob', 'Joe', 'Lucas', 'Magg
 
 let nums = [34, 10, 100000, 67, 99]; //not sorting based on numeric value, converts them as strings
 console.log(nums.sort()); //[10, 100000, 34, 67, 99]
+
+//arrays are stored as Reference types in the memory: so when we work with arrays store them in a variable, the variabe it self does not hold the array, it will hold a pointer, reference to where the array is in memory, compared to a value type variable where the actual value is stored
+
+let fruit = "orange";
+let color = fruit;
+fruit = "watermelon";
+
+let numsTwo = [5, 6, 7, 8];
+let otherNums = numsTwo;
+numsTwo.push(9);
+console.log(otherNums); //[5, 6, 7, 8, 9]
+otherNums.pop();
+console.log(otherNums);
+[5, 6, 7, 8];
+otherNums.pop();
+console.log(otherNums); //[5, 6, 7]
+console.log(numsTwo); //[5, 6, 7]
