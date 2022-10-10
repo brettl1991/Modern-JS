@@ -155,3 +155,14 @@ console.log(city); //Uncaught TypeError:
 const cityTwo = ["Hungary"];
 cityTwo.push("America");
 console.log(cityTwo); //['Hungary', 'America']
+
+//Nested arrays
+//arrays are best choice for ordered data
+
+const animalPairs = [
+  ["female", "male"][("ewe", "ram")],
+  ["peachen", "peacock"],
+];
+
+//access to peahen
+animalPairs[2][0];
