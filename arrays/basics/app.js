@@ -62,3 +62,12 @@ console.log(ingredients.includes("water", 5)); //false
 //indexOf: return the index if the element exist, if not exist will return -1
 console.log(ingredients.indexOf("oil")); //index of 1
 console.log(ingredients.indexOf("flour", 5)); //-1
+
+//Reverse and Join
+//Reverse mutates the original array
+let letters = ["T", "C", "E", "P", "S", "E", "R"];
+console.log(letters.reverse()); //['R', 'E', 'S', 'P', 'E', 'C', 'T']
+
+//Join return back a single string by joining the values, turn values (numbers) into strings
+console.log(letters.join("&")); //R&E&S&P&E&C&T
+console.log(letters.join(".")); //R.E.S.P.E.C.T
