@@ -11,10 +11,23 @@ console.log(lotto[2]);
 console.log(lotto[lotto.length - 1]); //34
 
 //Modifying arrays
-//arrays are mutable
+//arrays are mutable, we can change the original array
 let shoppingListTwo = ["Cheddar Cheese", "2% milk"];
 shoppingListTwo[1] = "Whole milk";
 console.log(shoppingListTwo); //['Cheddar Cheese', 'Whole milk']
 //add a value
 shoppingListTwo[shoppingListTwo.length] = "Tomatoes";
 console.log(shoppingListTwo); //['Cheddar Cheese', 'Whole milk', 'Tomatoes']
+
+//Push, Pop
+let topSongs = [
+  "First Time Ever I Saw Your Face",
+  "God Only Knows",
+  "A Day In The Life",
+  "Life On Mars",
+];
+
+topSongs.push("Fortunate Son");
+console.log(topSongs); //['First Time Ever I Saw Your Face', 'God Only Knows', 'A Day In The Life', 'Life On Mars', 'Fortunate Son']
+topSongs.pop(); //remove last item
+console.log(topSongs); //['First Time Ever I Saw Your Face', 'God Only Knows', 'A Day In The Life', 'Life On Mars']
