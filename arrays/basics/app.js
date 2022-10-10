@@ -98,3 +98,34 @@ console.log(reptilesThree); //['lizard', 'tortoise']
 //make copy
 animalsCopy = animals.slice();
 console.log(animalsCopy); //['shark', 'shalmon', 'whale', 'bear', 'lizard', 'tortoise']
+
+//Splice: remove/replace elements, update middle of the array
+//its indexes: startIndex(the index at which to start changing the array), deleteCount(how many you want to delete), itemsToInsert(how many you want to insert)
+animals.splice(1, 0, "octopus");
+console.log(animals); //["shark", "octopus", "shalmon", "whale", "bear", "lizard", "tortoise"];
+animals.splice(3, 2);
+console.log(animals); //['shark', 'octopus', 'shalmon', 'lizard', 'tortoise']
+animals.splice(3, 0, "snake", "frog");
+console.log(animals); //['shark', 'octopus', 'shalmon', 'snake', 'frog', 'lizard', 'tortoise']
+
+//use to replace
+animals.splice(0, 2, "SHARK", "OCTOPUS");
+console.log(animals); //['SHARK', 'OCTOPUS', 'shalmon', 'snake', 'frog', 'lizard', 'tortoise']
+
+//Sorting: sort an array
+let people = [
+  "Maggie",
+  "Joe",
+  "Steven",
+  "Agnes",
+  "Jacob",
+  "Billie",
+  "Mario",
+  "Lucas",
+  "Terry",
+];
+
+console.log(people.sort()); //['Agnes', 'Billie', 'Jacob', 'Joe', 'Lucas', 'Maggie', 'Mario', 'Steven', 'Terry'] alphabetically sorted
+
+let nums = [34, 10, 100000, 67, 99]; //not sorting based on numeric value, converts them as strings
+console.log(nums.sort()); //[10, 100000, 34, 67, 99]
