@@ -47,3 +47,18 @@ console.log(dishesToDo);
 let fruits = ["apple", "banana"];
 let veggies = ["aspargus", "brussel sprouts"];
 console.log(fruits.concat(veggies)); //['apple', 'banana', 'aspargus', 'brussel sprouts']
+
+//Includes and IndexOf
+//includes: return true or false, contain or not?
+
+let ingredients = ["water", "oil", "flour", "rice", "bean", "pasta"];
+
+console.log(ingredients.includes("aspargus")); //false
+
+//we can specify the index as weel from where
+//after 5th index it is contain water?
+console.log(ingredients.includes("water", 5)); //false
+
+//indexOf: return the index if the element exist, if not exist will return -1
+console.log(ingredients.indexOf("oil")); //index of 1
+console.log(ingredients.indexOf("flour", 5)); //-1
