@@ -146,3 +146,12 @@ console.log(otherNums);
 otherNums.pop();
 console.log(otherNums); //[5, 6, 7]
 console.log(numsTwo); //[5, 6, 7]
+
+//Using const with arrays: values can change
+const city = "Lisbon";
+// city.push("Hungary");
+console.log(city); //Uncaught TypeError:
+
+const cityTwo = ["Hungary"];
+cityTwo.push("America");
+console.log(cityTwo); //['Hungary', 'America']
