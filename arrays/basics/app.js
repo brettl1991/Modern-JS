@@ -160,9 +160,9 @@ console.log(cityTwo); //['Hungary', 'America']
 //arrays are best choice for ordered data
 
 const animalPairs = [
-  ["female", "male"][("ewe", "ram")],
+  ["female", "male", ["ewe", "ram"]],
   ["peachen", "peacock"],
 ];
 
 //access to peahen
-animalPairs[2][0];
+console.log(animalPairs[0][2]);
