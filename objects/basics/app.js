@@ -119,7 +119,7 @@ const palette2 = paletteNew;
 palette2.green = "#ebf876";
 
 //Both variables reflect that change...
-palette.green; //"#ebf876"
+paletteNew.green; //"#ebf876"
 palette2.green; //"#ebf876"
 
 //Array-Object equality
