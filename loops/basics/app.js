@@ -16,22 +16,22 @@ for (let i = 1; i <= 10; i++) {
 for (let i = 1; i <= 10; i += 3) {
   console.log("HELLO:", i);
 } //HELLO: 1
-// app.js:17 HELLO: 4
-// app.js:17 HELLO: 7
-// app.js:17 HELLO: 10
+// HELLO: 4
+// HELLO: 7
+// HELLO: 10
 
 // Printing first 20 perfect squares:
 for (let num = 1; num <= 20; num++) {
   console.log(`${num}x${num} = ${num * num}`);
 } //1x1 = 1
-// app.js:25 2x2 = 4
-// app.js:25 3x3 = 9
-// app.js:25 4x4 = 16
-// app.js:25 5x5 = 25
-// app.js:25 6x6 = 36
-// app.js:25 7x7 = 49
-// app.js:25 8x8 = 64
-// app.js:25 9x9 = 81....etc
+//2x2 = 4
+//3x3 = 9
+//4x4 = 16
+//5x5 = 25
+//6x6 = 36
+//7x7 = 49
+//8x8 = 64
+//9x9 = 81....etc
 
 // Counting DOWN from 200 by intervals of 25:
 for (let i = 200; i >= 0; i -= 25) {
