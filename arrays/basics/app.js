@@ -147,7 +147,7 @@ otherNums.pop();
 console.log(otherNums); //[5, 6, 7]
 console.log(numsTwo); //[5, 6, 7]
 
-//Using const with arrays: values can change
+//Using const with arrays: values can't change
 const city = "Lisbon";
 // city.push("Hungary");
 console.log(city); //Uncaught TypeError:
