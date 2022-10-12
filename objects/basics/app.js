@@ -54,3 +54,54 @@ userReviews["queenBee49"] = "queenBee47";
 console.log(userReviews); //{queenBee49: 'queenBee47', mrSmith78: 3.5}
 userReviews["queenBee49"] += 2;
 console.log(userReviews); //{queenBee49: 'queenBee472', mrSmith78: 3.5}
+
+//Nested arrays & Objects
+const student = {
+  firstName: "David",
+  lastName: "Jones",
+  strengths: ["Music", "Art"],
+  exams: {
+    midterm: 92,
+    final: 88,
+  },
+};
+
+//avg of midterm and final
+
+const avg = (student.exams.midterm + student.exams.final) / 2;
+
+const shoppingCart = [
+  {
+    product: "Jenga Classic",
+    price: 6.88,
+    quantity: 1,
+  },
+  {
+    product: "Echo Dot",
+    price: 29.99,
+    quantity: 3,
+  },
+  {
+    product: "Fire Stick",
+    price: 39.99,
+    quantity: 2,
+  },
+];
+
+//Gameboard
+
+const game = {
+  player1: {
+    username: "Blue",
+    playingAs: "X",
+  },
+  player2: {
+    username: "Muffins",
+    playingAs: "O",
+  },
+  board: [
+    ["O", null, "X"],
+    ["X", "O", "X"],
+    [null, "O", "X"],
+  ],
+};
