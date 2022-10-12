@@ -16,3 +16,28 @@ console.log(fitBitData);
 //. syntax
 console.log(fitBitData.totalMiles); //211.7
 //in objects all keys stored as strings!
+
+//[] syntax
+const numbers = {
+  100: "one hundred",
+  16: "sixteen",
+  "76 trombones": "great song",
+};
+
+console.log(numbers[100]); //one hundred
+console.log(numbers["76 trombones"]); //great song
+
+const palette = {
+  red: "#eb4d4b",
+  yellow: "#f9ca24",
+  blue: "#30336b",
+};
+
+//access syntaxes
+console.log(palette.red); //#eb4d4b
+console.log(palette["red"]); //#eb4d4b
+
+//main advantage of using [] if you have a variable or want to use a dynamic value in order to retrive information
+let mysteryColor = "yellow";
+console.log(palette[mysteryColor]); //#f9ca24
+console.log(palette.mysteryColor); //undefined because looking for exact name of mysteryColor
