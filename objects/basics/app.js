@@ -41,3 +41,16 @@ console.log(palette["red"]); //#eb4d4b
 let mysteryColor = "yellow";
 console.log(palette[mysteryColor]); //#f9ca24
 console.log(palette.mysteryColor); //undefined because looking for exact name of mysteryColor
+
+//Add and update properties
+const userReviews = {};
+
+userReviews["queenBee49"] = 4.0;
+console.log(userReviews); //{queenBee49: 4}
+userReviews.mrSmith78 = 3.5;
+console.log(userReviews); //{queenBee49: 4, mrSmith78: 3.5}
+//update
+userReviews["queenBee49"] = "queenBee47";
+console.log(userReviews); //{queenBee49: 'queenBee47', mrSmith78: 3.5}
+userReviews["queenBee49"] += 2;
+console.log(userReviews); //{queenBee49: 'queenBee472', mrSmith78: 3.5}
