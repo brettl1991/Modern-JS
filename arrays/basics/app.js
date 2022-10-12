@@ -164,5 +164,4 @@ const animalPairs = [
   ["peachen", "peacock"],
 ];
 
-//access to peahen
-console.log(animalPairs[0][2]);
+console.log(animalPairs[0][2]); //['ewe', 'ram']
