@@ -360,3 +360,36 @@ let avg = totalMovie / ratings.length;
 console.log("Average Rating: ", avg);
 
 //Average Rating:  8.6875
+
+//For in loop: loops over the keys in an object
+
+const jeopardyWinnings = {
+  regularPlay: 2522700,
+  whatsonChallange: 300000,
+  tournamentOfChampions: 500000,
+  battleOfTheDecades: 100000,
+};
+
+for (let prop in jeopardyWinnings) {
+  console.log(prop); //we get the keys
+  console.log(jeopardyWinnings[prop]); //values
+}
+
+let totalWinnings = 0;
+
+for (let prop in jeopardyWinnings) {
+  totalWinnings += jeopardyWinnings[prop];
+
+  console.log(`Ken Jennings Total earnings: ${totalWinnings}`);
+}
+
+// Ken Jennings Total earnings: 2522700
+// Ken Jennings Total earnings: 2822700
+// Ken Jennings Total earnings: 3322700
+// Ken Jennings Total earnings: 3422700
+
+//with arrays: as arrays technically are objects
+//no so great to use with arrays because of order
+for (let k in [88, 99, 77, 66]) {
+  console.log(k); //0 1 2 3 so we just looping over the properties
+}
