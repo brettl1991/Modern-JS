@@ -170,7 +170,7 @@ for (let i = 0; i < gameBoard.length; i++) {
 }
 console.log(totalScore); //230
 
-//While loop: the code will run while that condition is true
+//While loop: the code will run while that condition is true, useful when you dont know how many times your loop will run
 for (let i = 0; i <= 5; i++) {
   console.log(i);
 }
@@ -188,3 +188,21 @@ while (j <= 5) {
 // 3
 // 4
 // 5
+
+// Pick a target number we are trying to guess
+const target = Math.floor(Math.random() * 10);
+// Make initial guess
+let guess = Math.floor(Math.random() * 10);
+
+// Continue looping while guess is not the target num
+while (guess !== target) {
+  console.log(`Target: ${target} Guess: ${guess}`);
+  // IMPORTANT!!
+  // Update the value of guess each time through the loop
+  guess = Math.floor(Math.random() * 10); //without this will be infinite
+}
+console.log(`Target: ${target} Guess: ${guess}`);
+console.log(`CONGRATS YOU WIN!!`);
+
+//while some condition
+//in the loop, update or attempt or make that condition false
