@@ -169,3 +169,22 @@ for (let i = 0; i < gameBoard.length; i++) {
   }
 }
 console.log(totalScore); //230
+
+//While loop: the code will run while that condition is true
+for (let i = 0; i <= 5; i++) {
+  console.log(i);
+}
+
+//Recreating the above for loop w/ a while loop:
+let j = 0;
+while (j <= 5) {
+  console.log(j);
+  j++;
+}
+
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
