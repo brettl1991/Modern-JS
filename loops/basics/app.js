@@ -206,3 +206,24 @@ console.log(`CONGRATS YOU WIN!!`);
 
 //while some condition
 //in the loop, update or attempt or make that condition false
+
+//Break keyword: break out of loops, for for loop uncommon, if nested loops just breaks out of its current loop
+const targetNew = Math.floor(Math.random() * 10);
+let guessNew;
+//ANOTHER APPROACH TO THE PREVIOUS GUESSING 'GAME'
+while (true) {
+  if (targetNew === guessNew) break; //Break stops the loop in its tracks
+  console.log(`Target: ${targetNew} Guess: ${guessNew}`);
+  guessNew = Math.floor(Math.random() * 10);
+}
+console.log(`Target: ${targetNew} Guess: ${guessNew}`);
+console.log(`CONGRATS YOU WIN!!`);
+
+// Target: 6 Guess: 8
+// Target: 6 Guess: 2
+// Target: 6 Guess: 0
+// Target: 6 Guess: 7
+// Target: 6 Guess: 4
+// Target: 6 Guess: 8
+// Target: 6 Guess: 6
+// CONGRATS YOU WIN!!
