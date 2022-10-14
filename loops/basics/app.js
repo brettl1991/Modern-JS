@@ -228,7 +228,7 @@ console.log(`CONGRATS YOU WIN!!`);
 // Target: 6 Guess: 6
 // CONGRATS YOU WIN!!
 
-//For of: when we want to iterate on an iterable(array, objects...)
+//For of: when we want to iterate on an iterable(array, strings...)
 let subreddits = ["soccer", "popheads", "cringe", "books"];
 // With a standard for loop
 for (let i = 0; i < subreddits.length; i++) {
@@ -316,3 +316,36 @@ for (let i = 0; i < words1.length; i++) {
 // milkshake
 // bathtub
 // blackberry
+
+//For of with objects
+const movieReviews = {
+  Arrival: 9.5,
+  Alien: 9,
+  Amelie: 8,
+  "In Bruges": 9,
+  Amadeus: 10,
+  "Kill Bill": 8,
+  "Little Miss Sunshine": 8.5,
+  Coraline: 7.5,
+};
+
+// THIS DOES NOT WORK!
+// OBJECTS ARE NOT ITERABLE (can't use a for...of loop)
+// for (let x of movieReviews) {
+// 	console.log(x);
+// }
+
+// We CAN iterate over the keys of an object
+for (let movie of Object.keys(movieReviews)) {
+  console.log(`You rated ${movie} - ${movieReviews[movie]}`);
+}
+
+// We can also iterate over the values
+// To calculate the average movie rating:
+const ratings = Object.values(movieReviews);
+let total = 0;
+for (let r of ratings) {
+  total += r;
+}
+let avg = total / ratings.length;
+console.log("Average Rating: ", avg);
