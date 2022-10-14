@@ -265,3 +265,54 @@ for (let char of "cockadoodledoo") {
 // E
 // D
 // 2 O
+
+//Comparing for and for of
+const magicSquare = [
+  [2, 7, 6],
+  [9, 5, 1],
+  [4, 3, 8],
+];
+
+// Version using a for loop...
+//sum each row and verify it is equal to 15
+for (let i = 0; i < magicSquare.length; i++) {
+  let row = magicSquare[i];
+  let sum = 0;
+  for (let j = 0; j < row.length; j++) {
+    sum += row[j];
+  }
+  console.log(`${row} summed to ${sum}`);
+}
+
+// Much cleaner version using a for...of
+for (let row of magicSquare) {
+  let sum = 0;
+  for (let num of row) {
+    sum += num;
+  }
+  console.log(`${row} summed to ${sum}`);
+}
+
+// 2,7,6 summed to 15
+// 9,5,1 summed to 15
+// 4,3,8 summed to 15
+// 2,7,6 summed to 15
+// 9,5,1 summed to 15
+// 4,3,8 summed to 15
+
+// EXAMPLE 2
+//loop over the first array and print out of each element the second array elements
+//not good to use for of because we need the index/position
+// If you need the indices, use a traditional for loop!
+const words1 = ["mail", "milk", "bath", "black"];
+const words2 = ["box", "shake", "tub", "berry"];
+
+for (let i = 0; i < words1.length; i++) {
+  //Access index i of both arrays
+  console.log(`${words1[i]}${words2[i]}`);
+}
+
+// mailbox
+// milkshake
+// bathtub
+// blackberry
