@@ -340,12 +340,23 @@ for (let movie of Object.keys(movieReviews)) {
   console.log(`You rated ${movie} - ${movieReviews[movie]}`);
 }
 
+// You rated Arrival - 9.5
+// You rated Alien - 9
+// You rated Amelie - 8
+// You rated In Bruges - 9
+// You rated Amadeus - 10
+// You rated Kill Bill - 8
+// You rated Little Miss Sunshine - 8.5
+// You rated Coraline - 7.5
+
 // We can also iterate over the values
 // To calculate the average movie rating:
 const ratings = Object.values(movieReviews);
-let total = 0;
+let totalMovie = 0;
 for (let r of ratings) {
-  total += r;
+  totalMovie += r;
 }
-let avg = total / ratings.length;
+let avg = totalMovie / ratings.length;
 console.log("Average Rating: ", avg);
+
+//Average Rating:  8.6875
