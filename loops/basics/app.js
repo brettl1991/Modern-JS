@@ -227,3 +227,41 @@ console.log(`CONGRATS YOU WIN!!`);
 // Target: 6 Guess: 8
 // Target: 6 Guess: 6
 // CONGRATS YOU WIN!!
+
+//For of: when we want to iterate on an iterable(array, objects...)
+let subreddits = ["soccer", "popheads", "cringe", "books"];
+// With a standard for loop
+for (let i = 0; i < subreddits.length; i++) {
+  console.log(subreddits[i]);
+}
+//Much cleaner  with a for...of loop!
+for (let sub of subreddits) {
+  console.log(sub);
+}
+
+// soccer
+// popheads
+// cringe
+// books
+// soccer
+// popheads
+// cringe
+// books
+
+//Works with other iterables, like strings!
+for (let char of "cockadoodledoo") {
+  console.log(char.toUpperCase());
+}
+
+// C
+// O
+// C
+// K
+// A
+// D
+// 2 O
+// D
+// L
+// E
+// D
+// 2 O
