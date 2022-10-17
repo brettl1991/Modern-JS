@@ -93,3 +93,17 @@ function sum(x, y) {
 function divide(a, b) {
   console.log(a / b);
 }
+
+//Return statement
+// No return!
+function add(x, y) {
+  console.log(x + y);
+} //for us in the console to see
+
+// This version returns the sum of x & y;
+function add(x, y) {
+  return x + y;
+}
+
+// We can capture the return value:
+const total = add(4, 9); //13
