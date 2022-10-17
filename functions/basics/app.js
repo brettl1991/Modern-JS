@@ -79,3 +79,17 @@ function throwDice(numRolls) {
 
 throwDice(2);
 throwDice(6);
+
+//Multiple parameters(arguments)
+function square(num) {
+  //this is parameter
+  console.log(num * num);
+}
+
+function sum(x, y) {
+  console.log(x + y);
+}
+
+function divide(a, b) {
+  console.log(a / b);
+}
