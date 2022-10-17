@@ -94,7 +94,7 @@ function divide(a, b) {
   console.log(a / b);
 }
 
-//Return statement
+//Return statement: use to sexport or return a value to capture later ina  variable or do something with it
 // No return!
 function add(x, y) {
   console.log(x + y);
@@ -107,3 +107,40 @@ function add(x, y) {
 
 // We can capture the return value:
 const total = add(4, 9); //13
+
+//Return values, after return the code execute, after the code never run
+function square(x) {
+  return x * x;
+  console.log("ALL DONE!"); //this NEVER runs;
+}
+
+// One way of writing this function
+function isPurple(color) {
+  if (color.toLowerCase() === "purple") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// We don't need the else!
+function isPurple(color) {
+  if (color.toLowerCase() === "purple") {
+    return true;
+  }
+  return false;
+}
+
+// An even shorter way!
+function isPurple(color) {
+  return color.toLowerCase() === "purple";
+}
+
+function containsPurple(arr) {
+  for (let color of arr) {
+    if (color === "purple" || color === "magenta") {
+      return true;
+    }
+  }
+  return false;
+}
