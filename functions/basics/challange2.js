@@ -8,8 +8,7 @@ function calcAvarage(arr) {
   for (let nums of arr) {
     total += nums;
   }
-  let result = total / arr.length;
-  return result;
+  return total / arr.length;
 }
 
 console.log(calcAvarage([0, 50]));
