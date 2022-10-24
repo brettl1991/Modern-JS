@@ -111,3 +111,37 @@ const product = function multiply(x, y) {
 };
 
 product();
+
+//Higher order functions
+//functions are objects
+function add(x, y) {
+  return x + y;
+}
+
+const subtract = function (x, y) {
+  return x - y;
+};
+
+function multiply(x, y) {
+  return x * y;
+}
+
+const divide = function (x, y) {
+  return x / y;
+};
+
+//We can store functions in an array!
+const operations = [add, subtract, multiply, divide];
+
+//Loop over all the functions in operations
+for (let func of operations) {
+  let result = func(30, 5); //execute func!
+  console.log(result);
+}
+//will run all the func and give back results
+
+// We can also store functions in objects! now we creating a method
+const thing = {
+  doSomething: multiply,
+};
+thing.doSomething(4, 5); //20
