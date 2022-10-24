@@ -90,3 +90,24 @@ function outer() {
 }
 
 outer(); //'AMADEUS'
+
+//Function expression
+// Function Statement
+function add(x, y) {
+  return x + y;
+}
+add();
+
+// Function Expression (Anonymous)
+const sum = function (x, y) {
+  return x + y;
+};
+
+sum();
+
+// Function Expression (Named)
+const product = function multiply(x, y) {
+  return x * y;
+};
+
+product();
