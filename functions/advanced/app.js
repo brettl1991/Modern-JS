@@ -256,3 +256,28 @@ const btn = document.querySelector("button");
 btn.addEventListener("click", function () {
   alert("WHY DID YOU CLICK ME!!??");
 });
+
+//Hoisting
+// variables declared with var are hoisted
+// console.log(animal);//get undefined
+// var animal = 'Tapir';
+// console.log(animal);//Tapir
+
+// variables declared with let & const are not hoisted
+// console.log(shrimp);//ref error
+// const shrimp = 'Harlequin Shrimp';
+
+// function statements are hoisted
+// howl();//still works
+
+// function howl() {
+//   console.log("AWOOOOOOO");
+// }
+
+// function expressions are...kind of hoisted.
+// The variable is hoisted, but has a value of undefined
+hoot(); //type error
+console.log(hoot); //this will be undefined because the variable is hoisted with var but not with let or const
+var hoot = function () {
+  console.log("HOOOO HOOOOO");
+};
