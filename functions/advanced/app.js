@@ -71,3 +71,22 @@ function doubleArr(arr) {
 }
 
 console.log(doubleArr([1, 2, 3])); //[2, 4, 6]
+
+//Lexical scope
+function outer() {
+  let movie = "Amadeus";
+
+  function inner() {
+    // let movie = "The Shining";
+
+    function extraInner() {
+      //movie is not defined in this function
+      //but it has access to parent function's variables
+      console.log(movie.toUpperCase());
+    }
+    extraInner();
+  }
+  inner();
+}
+
+outer(); //'AMADEUS'
