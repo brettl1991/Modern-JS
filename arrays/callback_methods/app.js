@@ -68,3 +68,65 @@ for (let book of books) {
 for (let i = 0; i < books.length; i++) {
   console.log(books[i].title.toUpperCase());
 }
+
+//Map creates a new array from an existing array by calling your callback function with each element in the original array. Can be used to extract portions of an array or transform an array into a new array. Excepts a callback, calls with every element in the array and builds a new array with this values.
+const numbersNew = [20, 21, 22, 23, 24, 25, 26, 27];
+const words = ["asap", "byob", "rsvp", "diy"];
+
+//Map
+const doubles = numbersNew.map(function (num) {
+  return num * 2; //Need to return the value!
+});
+//[40, 42, 44, 46, 48, 50, 52, 54]
+
+//check if value is even
+const numDetail = numbersNew.map(function (n) {
+  return {
+    value: n,
+    isEven: n % 2 === 0,
+  };
+});
+
+console.log(numDetail);
+// 0:{value: 20, isEven: true}
+// 1:{value: 21, isEven: false}
+// 2:{value: 22, isEven: true}
+// 3:{value: 23, isEven: false}
+// 4:{value: 24, isEven: true}
+// 5:{value: 25, isEven: false}
+// 6:{value: 26, isEven: true}
+// 7:{value: 27, isEven: false}
+
+//all char is uppercase and separated with .
+const abbrevs = words.map(function (word) {
+  return word.toUpperCase().split("").join(".");
+});
+//["A.S.A.P", "B.Y.O.B", "R.S.V.P", "D.I.Y"]
+
+const booksNew = [
+  {
+    title: "Good Omens",
+    authors: ["Terry Pratchett", "Neil Gaiman"],
+    rating: 4.25,
+  },
+  {
+    title: "Bone: The Complete Edition",
+    authors: ["Jeff Smith"],
+    rating: 4.42,
+  },
+  {
+    title: "American Gods",
+    authors: ["Neil Gaiman"],
+    rating: 4.11,
+  },
+  {
+    title: "A Gentleman in Moscow",
+    authors: ["Amor Towles"],
+    rating: 4.36,
+  },
+];
+
+const titles = booksNew.map(function (b) {
+  return b.title;
+});
+//["Good Omens", "Bone: The Complete Edition", "American Gods", "A Gentleman in Moscow"]
