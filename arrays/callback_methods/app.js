@@ -243,3 +243,109 @@ console.log(goodBook);
 const neilBook = booksNewTwo.find((b) => b.authors.includes("Neil Gaiman"));
 console.log(neilBook);
 // {title: 'Good Omens', authors: Array(2), rating: 4.25}
+
+//Filter:creates a new array with all elements that pass teh test implemented by the provided function. The callback returns true or false, if it returns true (n) is added to the filtered array
+const numsNew = [34, 35, 67, 54, 109, 102, 32, 9];
+
+const odds = numsNew.filter((n) => n % 2 === 1);
+console.log(odds); //[35, 67, 109, 9]
+const evens = numsNew.filter((n) => n % 2 === 0);
+console.log(evens); //[34, 54, 102, 32]
+const bigNums = numsNew.filter((n) => n > 50);
+console.log(bigNums); //[67, 54, 109, 102]
+
+const booksNewThree = [
+  {
+    title: "Good Omens",
+    authors: ["Terry Pratchett", "Neil Gaiman"],
+    rating: 4.25,
+    genres: ["fiction", "fantasy"],
+  },
+  {
+    title: "Changing My Mind",
+    authors: ["Zadie Smith"],
+    rating: 3.83,
+    genres: ["nonfiction", "essays"],
+  },
+  {
+    title: "Bone: The Complete Edition",
+    authors: ["Jeff Smith"],
+    rating: 4.42,
+    genres: ["fiction", "graphic novel", "fantasy"],
+  },
+  {
+    title: "American Gods",
+    authors: ["Neil Gaiman"],
+    rating: 4.11,
+    genres: ["fiction", "fantasy"],
+  },
+  {
+    title: "A Gentleman in Moscow",
+    authors: ["Amor Towles"],
+    rating: 4.36,
+    genres: ["fiction", "historical fiction"],
+  },
+  {
+    title: "The Name of the Wind",
+    authors: ["Patrick Rothfuss"],
+    rating: 4.54,
+    genres: ["fiction", "fantasy"],
+  },
+  {
+    title: "The Overstory",
+    authors: ["Richard Powers"],
+    rating: 4.19,
+    genres: ["fiction", "short stories"],
+  },
+  {
+    title: "The Way of Kings",
+    authors: ["Brandon Sanderson"],
+    rating: 4.65,
+    genres: ["fantasy", "epic"],
+  },
+  {
+    title: "Lord of the flies",
+    authors: ["William Golding"],
+    rating: 3.67,
+    genres: ["fiction"],
+  },
+];
+
+//All books rated over 4.3:
+const goodBooks = booksNewThree.filter((b) => b.rating > 4.3);
+
+// All books with fantasy as a genre:
+const fantasyBooks = booksNewThree.filter((book) =>
+  book.genres.includes("fantasy")
+);
+
+// all books that are either short stories or essays:
+const shortForm = booksNewThree.filter(
+  (book) =>
+    book.genres.includes("short stories") || book.genres.includes("essays")
+);
+
+// Simple search functionality:
+const query = "The";
+const results = booksNewThree.filter((book) => {
+  const title = book.title.toLowerCase();
+  return title.includes(query.toLowerCase());
+});
+console.log(results);
+//(5) [{…}, {…}, {…}, {…}, {…}]
+// 0
+// :
+// {title: 'Bone: The Complete Edition', authors: Array(1), rating: 4.42, genres: Array(3)}
+// 1
+// :
+// {title: 'The Name of the Wind', authors: Array(1), rating: 4.54, genres: Array(2)}
+// 2
+// :
+// {title: 'The Overstory', authors: Array(1), rating: 4.19, genres: Array(2)}
+// 3
+// :
+// {title: 'The Way of Kings', authors: Array(1), rating: 4.65, genres: Array(2)}
+// 4
+// :
+// {title: 'Lord of the flies', authors: Array(1), rating: 3.67, genres: Array(1)}
+// length:5
