@@ -349,3 +349,86 @@ console.log(results);
 // :
 // {title: 'Lord of the flies', authors: Array(1), rating: 3.67, genres: Array(1)}
 // length:5
+
+//Some and every
+//every tests wheter all elements in the array pass the provided function, returns a boolean value.
+//some similar to every, but returns true if any of the array elements pass the test function, so if at least 1 element pass the test returns true
+const wordsNew = ["dog", "dig", "log", "bag", "wag"];
+
+//Is every word 3 characters long?
+const all3Letters = wordsNew.every((word) => word.length === 3);
+console.log(all3Letters); //true
+
+// Do all words end in 'g'?
+const allEndInG = wordsNew.every((word) => {
+  const last = word.length - 1;
+  return word[last] === "g";
+});
+
+//Does at least 1 book start with 'd'?
+const someStartWithD = wordsNew.some((word) => word[0] === "d");
+
+// Do all words start with 'd'?
+const allStartWithD = wordsNew.every((word) => word[0] === "d");
+
+const booksOnShelves = [
+  {
+    title: "Good Omens",
+    authors: ["Terry Pratchett", "Neil Gaiman"],
+    rating: 4.25,
+    genres: ["fiction", "fantasy"],
+  },
+  {
+    title: "Changing My Mind",
+    authors: ["Zadie Smith"],
+    rating: 3.83,
+    genres: ["nonfiction", "essays"],
+  },
+  {
+    title: "Bone: The Complete Edition",
+    authors: ["Jeff Smith"],
+    rating: 4.42,
+    genres: ["fiction", "graphic novel", "fantasy"],
+  },
+  {
+    title: "American Gods",
+    authors: ["Neil Gaiman"],
+    rating: 4.11,
+    genres: ["fiction", "fantasy"],
+  },
+  {
+    title: "A Gentleman in Moscow",
+    authors: ["Amor Towles"],
+    rating: 4.36,
+    genres: ["fiction", "historical fiction"],
+  },
+  {
+    title: "The Name of the Wind",
+    authors: ["Patrick Rothfuss"],
+    rating: 4.54,
+    genres: ["fiction", "fantasy"],
+  },
+  {
+    title: "The Overstory",
+    authors: ["Richard Powers"],
+    rating: 4.19,
+    genres: ["fiction", "short stories"],
+  },
+  {
+    title: "The Way of Kings",
+    authors: ["Brandon Sanderson"],
+    rating: 4.65,
+    genres: ["fantasy", "epic"],
+  },
+  {
+    title: "Lord of the flies",
+    authors: ["William Golding"],
+    rating: 3.67,
+    genres: ["fiction"],
+  },
+];
+//Are all books rated 3.5 or higher?
+const allGoodBooks = booksOnShelves.every((book) => book.rating > 3.5);
+
+//Do any books have 2 authors?
+const any2Authors = booksOnShelves.some((book) => book.authors.length === 2);
