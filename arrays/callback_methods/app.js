@@ -244,7 +244,7 @@ const neilBook = booksNewTwo.find((b) => b.authors.includes("Neil Gaiman"));
 console.log(neilBook);
 // {title: 'Good Omens', authors: Array(2), rating: 4.25}
 
-//Filter:creates a new array with all elements that pass teh test implemented by the provided function. The callback returns true or false, if it returns true (n) is added to the filtered array
+//Filter:creates a new array with all elements that pass the test implemented by the provided function. The callback returns true or false, if it returns true (n) is added to the filtered array
 const numsNew = [34, 35, 67, 54, 109, 102, 32, 9];
 
 const odds = numsNew.filter((n) => n % 2 === 1);
