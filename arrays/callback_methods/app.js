@@ -510,3 +510,22 @@ const booksDifferent = [
 
 // Sorting books by their rating:
 booksDifferent.sort((a, b) => b.rating - a.rating);
+
+//Reduce: executes a reducer function on each element of the array, resulting in a single value
+//Format: array.reduce((accumulator, currentValue) => { return accumulator + currentValue}); this example sums all nums in an array
+//accumulator will store end result of reduce
+//currentValue represents each individual elements in the array
+
+const lotsofNums = [3, 4, 5, 6, 7];
+// To multiply all values in nums:
+const product = lotsofNums.reduce((total, currentVal) => {
+  return total * currentVal;
+});
+
+// total    currentVal    returnVal
+// 3             4           12
+// 12            5           60
+// 60            6           360
+// 360           7           2520
+
+//Final Return Value: 2520
