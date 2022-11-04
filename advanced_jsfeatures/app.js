@@ -152,3 +152,25 @@ const random = [
 
 console.log(random);
 // ['h', 'e', 'l', 'l', 'o', {…}]
+// 0:"h"
+// 1:"e"
+// 2:"l"
+// 3:"l"
+// 4:"o"
+// 5:{family: 'Felidae', furry: true, legs: 4}
+
+//The arguments object
+//The arguments object is available in every function you write (except arrow functions)
+//It contains all the arguments passed in. Using i not really great
+function sum() {
+  //It is NOT an array, we have to turn it into one if we want to use array methods
+  const argsArr = [...arguments];
+  return argsArr.reduce((total, currVal) => {
+    return total + currVal;
+  });
+}
+
+// No arguments object inside of arrow functions :(
+const multiply = () => {
+  console.log(arguments); //this will be undefined because wont work with arrow function
+};
