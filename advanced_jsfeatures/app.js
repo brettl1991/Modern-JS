@@ -236,3 +236,23 @@ fourth; //'Ghirmay Ghebreslassie'
 const [winner, ...others] = raceResults;
 winner; //'Eliud Kipchoge'
 others; //["Feyisa Lelisa", "Galen Rupp", "Ghirmay Ghebreslassie", "Alphonce Simbu", "Jared Ward"]
+
+//Object destructuring
+const runner = {
+  firstt: "Eliud",
+  last: "Kipchoge",
+  country: "Kenya",
+  title: "Elder of the Order of the Golden Heart of Kenya",
+};
+
+// const {
+//   first,
+//   last,
+//   time
+// } = runner;
+
+//give properties new name
+const { country: nation, title: honorific } = runner;
+
+//using rest operator
+const { firstt, last, ...other } = runner;
