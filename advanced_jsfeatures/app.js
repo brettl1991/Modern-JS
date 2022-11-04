@@ -16,12 +16,12 @@
 // }
 
 // The new super clean way of adding defaults!
-function multiply(x, y = 1) {
+function multiplyFirst(x, y = 1) {
   //if y undefined use 1
   return x * y;
 }
-multiply(3, 4); //12
-multiply(3); //3
+multiplyFirst(3, 4); //12
+multiplyFirst(3); //3
 
 // Another example!
 // const greet = (person, greeting = 'hi') => {
@@ -174,3 +174,36 @@ function sum() {
 const multiply = () => {
   console.log(arguments); //this will be undefined because wont work with arrow function
 };
+
+//REST parameter: collects things down into a single array, used when we are making functions that except unlimeted number of arguments or variable number of arguments. Collects all remaining arguments into an actual array.
+// OLD WAY!
+// function sum() {
+//   const argsArr = [...arguments]
+//   return argsArr.reduce((total, currVal) => {
+//     return total + currVal
+//   })
+// }
+
+// New way using rest: We put inside the parameter list inside a function definition.
+function sumNew(...nums) {
+  return nums.reduce((total, currVal) => {
+    return total + currVal;
+  });
+}
+
+//We can have named params and then collect the rest into an array:
+function fullName(first, last, ...titles) {
+  console.log("first", first);
+  console.log("last", last);
+  console.log("titles", titles);
+}
+
+fullName("tom", "john", "iii", "order of the phoenix");
+
+// first tom
+// last john
+//['iii', 'order of the phoenix']
+
+// We can use rest parameters in arrow functions!
+const multiplyNew = (...nums) =>
+  nums.reduce((total, currVal) => total * currVal);
