@@ -99,3 +99,56 @@ const inverts = [...cnidaria, ...gastropods, ...cephalopods];
 
 const cephCopy = [...cephalopods];
 //["dumbo octopus", "humboldt squid", "flamboyant cuttlefish"]
+
+//Spread objects: copies proprties from one object into another object literal.
+const feline = {
+  legs: 4,
+  family: "Felidae",
+};
+
+const canine = {
+  family: "Caninae",
+  furry: true,
+  legs: 4,
+};
+
+const dog = {
+  ...canine,
+  isPet: true,
+  adorable: true,
+};
+//{family: "Caninae", furry: true, legs: 4, isPet: true, adorable: true}
+
+const houseCat = {
+  ...feline,
+  isGrumpy: true,
+  personality: "unpredictable",
+};
+//{legs: 4, family: "Felidae", isGrumpy: true, personality: "unpredictable"}
+
+const catDog = {
+  ...canine,
+  ...feline,
+};
+//{family: "Felidae", furry: true, legs: 4}
+
+//Order matters! Legs will be 3 here, because we set it AFTER spreading canine.If we switch them and legs: 3 comes first than ...canine, the legs will be 4
+const tripod = {
+  ...canine,
+  legs: 3,
+};
+//{family: "Caninae", furry: true, legs: 3}
+
+const catDogClone = {
+  ...catDog,
+};
+
+const random = [
+  ..."hello",
+  {
+    ...catDog,
+  },
+];
+
+console.log(random);
+// ['h', 'e', 'l', 'l', 'o', {…}]
