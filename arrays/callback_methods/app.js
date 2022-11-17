@@ -585,6 +585,7 @@ const votes = ["y", "y", "n", "y", "n", "y", "n", "y", "n", "n", "n", "y", "y"];
 // The shorter version:
 const resultsNew = votes.reduce((tally, val) => {
   tally[val] = (tally[val] || 0) + 1;
+
   return tally;
 }, {});
 console.log(resultsNew);
@@ -655,7 +656,9 @@ const booksLastPieces = [
 // To group books by rating: goal to create array of objects [{}]
 const groupedByRatings = booksLastPieces.reduce((groupedBooks, book) => {
   const key = Math.floor(book.rating); //chop decimal off
-  if (!groupedBooks[key]) groupedBooks[key] = [];
+  if (!groupedBooks[key]) {
+    groupedBooks[key] = [];
+  }
   groupedBooks[key].push(book);
   return groupedBooks;
 }, {});
