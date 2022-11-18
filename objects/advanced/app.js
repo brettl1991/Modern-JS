@@ -122,3 +122,14 @@ const math = {
 
 // To execute multiply:
 math.multiply(5, 9); //45
+
+//Method shorthand syntax: previous but short version
+const auth = {
+  username: "TommyBot",
+  login() {
+    console.log("LOGGED YOU IN!");
+  },
+  logout() {
+    console.log("GOODBYE");
+  },
+};
